@@ -52,8 +52,7 @@ public class LocalChatJoiner extends AbstractChatJoiner implements Runnable {
                 ConsoleHelper.writeMessage("Ошибка при отправке сообщения. Соединение будет закрыто.");
                 setUserJoined(false);
             }
-            //happens before: один из вызовов этого сеттера будет после создания нового объекта User
-            //happens before: один из вызовов этого сеттера объектом User obj будет после вызова этого сеттера из Server.play
+            //happens before: вызовов этого сеттера будет после вызова этогож сеттера из Server.play
             setPermissionToSend(false);
         }
 

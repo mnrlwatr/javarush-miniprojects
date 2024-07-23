@@ -27,6 +27,7 @@ public class User implements LocalChatJoinable {
 
     @Override
     public void joinToLocalChat() {
+        // тут можно сделать FactoryMethod (Pattern)
         chatJoiner = new LocalChatJoiner(this);
     }
 

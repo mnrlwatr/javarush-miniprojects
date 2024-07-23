@@ -69,9 +69,9 @@ public class Main {
 
 
         // если убрать sleep(35) то users.forEach(LocalChatJoinable::exit) сразу прервёт диалог
-        // можете поставить sleep(20) и посмотреть на результат (диалог прервётся, участники не успеют сказать всю речь)
+        // можете поставить sleep(15) и посмотреть на результат (диалог прервётся, участники не успеют сказать всю речь)
         try {
-            TimeUnit.SECONDS.sleep(34);
+            TimeUnit.SECONDS.sleep(35);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

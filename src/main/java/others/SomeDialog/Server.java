@@ -158,9 +158,6 @@ public class Server {
                     Thread.currentThread().interrupt();
                     throw new RuntimeException(e);
                 }
-
-                //happens before: один из вызовов этого сеттера будет после создания нового объекта User
-                //happens before: один из вызовов этого сеттера объектом User obj будет после вызова этого сеттера из Server.play
                 user.getChatJoiner().setPermissionToSend(true);
             }
 
