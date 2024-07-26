@@ -27,7 +27,8 @@ public class User implements LocalChatJoinable {
 
     @Override
     public void joinToLocalChat() {
-        // тут можно сделать FactoryMethod (Pattern)
+        //todo тут можно применить FactoryMethodPattern
+        // chatJoiner = ChatJoinerFactory.getChatJoiner(LocalChatJoinable.string)
         chatJoiner = new LocalChatJoiner(this);
     }
 
@@ -37,7 +38,7 @@ public class User implements LocalChatJoinable {
      */
     public void addSpeech(String... speech) {
         speechList.addAll(List.of(speech));
-        //todo case when no arguments: sitcomActorObj.addSpeech();
+        //todo случай когда метод вызываеться без аргументов addSpeech();
     }
 
     public void clearSpeechList() {
